@@ -44,6 +44,10 @@ sudo npm install -g pm2
 sudo ufw allow 22
 sudo ufw allow 8080
 sudo ufw enable
+
+
+# 🐻 2일차
+
 ---
 ## 3. 로컬에서 Project 생성
 1. 프로젝트 생성
