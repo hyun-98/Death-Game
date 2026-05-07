@@ -1,7 +1,7 @@
 # Death-Game
 netflix 데스게임의 게임들을 재미로 만들어보았다.
 
-1일차
+# 🐼 1일차
 play-web-prod
 play-server-prod
 
@@ -44,8 +44,52 @@ sudo npm install -g pm2
 sudo ufw allow 22
 sudo ufw allow 8080
 sudo ufw enable
+---
+## 3. 로컬에서 Project 생성
+1. 프로젝트 생성
+```
+mkdir death-game
+cd death-game
+npm init -y
+```
 
-## 3. API 앱 배포
+``` index.js
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Death Game Server Running");
+});
+
+app.listen(3000, () => {
+  console.log("Server running");
+});
+```
+2. 기본 구조
+```
+npm install express
+touch index.js
+```
+
+3. Github 연결
+```
+git init
+git add .
+git commit -m "init project"
+git remote add origin <repo_url>
+git push -u origin main
+```
+
+4. EC2 clone
+```
+cd /var/www/api
+git clone <repo_url>
+cd death-game
+npm install
+```
+
+---
+## 4. API 앱 배포
 
 #### 앱 디렉토리 생성
 mkdir -p /var/www/api && cd /var/www/api
