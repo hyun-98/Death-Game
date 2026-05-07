@@ -19,7 +19,7 @@ Ubuntu vs Amazon Linux
 
 ---
 
-1. 기본 네트워크 설정
+## 1. 기본 네트워크 설정
 
 VPC 서브넷 10.0.0.0/24
 
@@ -28,39 +28,39 @@ VPC 서브넷 10.0.0.0/24
 인바운드 : 본인 IP에서 SSH (22) 허용
 아웃바운드 : RDS, Redis 포트, 인터넷 허용
 
-2. EC2 서버 세팅
+## 2. EC2 서버 세팅
 
-# 시스템 업데이트
+#### 시스템 업데이트
 sudo apt update && sudo apt upgrade -y
 
-# Node.js 22 설치 (NodeSource)
+#### Node.js 22 설치 (NodeSource)
 curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 sudo apt install -y nodejs
 
-# PM2 설치 (프로세스 매니저)
+#### PM2 설치 (프로세스 매니저)
 sudo npm install -g pm2
 
-# 방화벽 설정
+#### 방화벽 설정
 sudo ufw allow 22
 sudo ufw allow 8080
 sudo ufw enable
 
-3. API 앱 배포
+## 3. API 앱 배포
 
-# 앱 디렉토리 생성
+#### 앱 디렉토리 생성
 mkdir -p /var/www/api && cd /var/www/api
 
-# Git에서 코드 clone (또는 scp로 파일 전송)
+#### Git에서 코드 clone (또는 scp로 파일 전송)
 git clone https://github.com/yourrepo/boardgame-api.git .
 
-# 패키지 설치
+#### 패키지 설치
 npm install --production
 
-# 환경변수 파일 설정
+#### 환경변수 파일 설정
 nano .env
-# DB_HOST, DB_PASSWORD, REDIS_URL, JWT_SECRET 등 입력
+#### DB_HOST, DB_PASSWORD, REDIS_URL, JWT_SECRET 등 입력
 
-# PM2로 실행
+#### PM2로 실행
 pm2 start app.js --name "boardgame-api"
 pm2 save
 pm2 startup  # 서버 재부팅 시 자동 시작
