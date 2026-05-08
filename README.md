@@ -168,3 +168,10 @@ death-game/                  ← 현재 root (여기서 git 관리)
 └── package.json             ← root package.json (워크스페이스 관리용)
 ```
 
+
+---
+
+깨달음
+
+* JSON : 주석 불가능
+json vs YAML
