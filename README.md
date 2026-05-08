@@ -81,7 +81,7 @@ git init
 git add .
 git commit -m "init project"
 git remote add origin <repo_url>
-git push -u origin main
+git push -u origin master
 ```
 
 4. EC2 clone
