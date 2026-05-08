@@ -133,6 +133,25 @@ app.use(cors({
 
 ---
 
-## 5. API 만들기
+## 5. API 만들기 (게임은 일단 chess로 시작)
+
+- 1단계: 백엔드에 Socket.io + 체스 로직 붙이기 (chess.js 라이브러리 활용)
+- 2단계: 간단한 프론트 HTML로 연결 테스트
+- 3단계: 프론트엔드 본격 개발
+- 4단계: 그때 DB 스키마 확정 + RDS 연결
+
+
+``` Node.js + Express + Socket.io + chess.js
+api/
+├── src/
+│   ├── socket/
+│   │   ├── index.js        # Socket.io 초기화
+│   │   └── gameHandler.js  # 게임 이벤트 처리
+│   ├── game/
+│   │   └── chessManager.js # 방 & 게임 상태 관리
+│   └── app.js              # Express + Socket.io 서버
+├── package.json
+└── .env
+```
 
 
