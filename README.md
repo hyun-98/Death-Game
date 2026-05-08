@@ -244,3 +244,49 @@ json vs YAML
 
 - 'npm init' 의 역할 :
 프로젝트의 "설명서 + 설정파일"을 만드는 것 package.json
+
+
+---
+
+## 🚀 Tech Stack
+
+### Backend
+![Node.js](https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/express-000000?style=for-the-badge&logo=express&logoColor=white)
+
+### Database
+![MySQL](https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+
+### DevOps / Deployment
+![AWS EC2](https://img.shields.io/badge/AWS%20EC2-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Linux](https://img.shields.io/badge/linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+
+### Tools
+![Git](https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white)
+![NPM](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
+
+---
+
+## 📌 Project Overview
+
+Death-Game 프로젝트는 사용자들이 참여하는 **실시간 게임 시스템**을 제공하는 웹 서비스입니다.
+
+- 유저 참여 기반 게임 로직
+- 서버에서 게임 상태 관리
+- 실시간 데이터 처리 구조 설계
+- EC2 서버 배포를 통한 운영 환경 구축
+
+---
+
+## ⚙️ Installation
+
+```bash
+# 1. repository clone
+git clone https://github.com/your-username/Death-Game.git
+
+# 2. project folder 이동
+cd Death-Game
+
+# 3. dependencies 설치
+npm install
