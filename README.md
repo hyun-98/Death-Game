@@ -34,16 +34,16 @@ VPC 서브넷 10.0.0.0/24
 sudo apt update && sudo apt upgrade -y
 
 #### Node.js 22 설치 (NodeSource)
-curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
-sudo apt install -y nodejs
+- curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+- sudo apt install -y nodejs
 
 #### PM2 설치 (프로세스 매니저)
 sudo npm install -g pm2
 
 #### 방화벽 설정
-sudo ufw allow 22
-sudo ufw allow 8080
-sudo ufw enable
+- sudo ufw allow 22
+- sudo ufw allow 8080
+- sudo ufw enable
 
 
 # 🐻 2일차
