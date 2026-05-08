@@ -113,3 +113,8 @@ pm2 start app.js --name "boardgame-api"
 pm2 save
 pm2 startup  # 서버 재부팅 시 자동 시작
 
+---
+
+## 5. API 만들기
+
+
