@@ -153,5 +153,18 @@ api/
 ├── package.json
 └── .env
 ```
-
+```
+death-game/                  ← 현재 root (여기서 git 관리)
+├── backend/
+│   ├── src/
+│   │   ├── game/
+│   │   │   └── chessManager.js
+│   │   └── socket/
+│   │       └── index.js
+│   ├── index.js             ← 기존 index.js 이동
+│   ├── package.json         ← 새로 생성
+│   └── .env                 ← 기존 .env 이동
+├── frontend/                ← 나중에 생성
+└── package.json             ← root package.json (워크스페이스 관리용)
+```
 
