@@ -171,7 +171,76 @@ death-game/                  ← 현재 root (여기서 git 관리)
 
 ---
 
-깨달음
+배운점
 
-* JSON : 주석 불가능
+- JSON : 주석 불가능
 json vs YAML
+
+- package.json의 역할pm2 save
+pm2 startup  # 서버 재부팅 시 자동 시작
+
+#### SG 설정
+TCP 3000 -> All allow
+
+#### cors 설치
+npm install cors -> 다른 서버에서 요청 오는 걸 허용할지 말지 정하는 보안정책
+
+``` 특정 front만 허용
+app.use(cors({
+  origin: "http://프론트주소"
+}));
+```
+
+#### express : Node.js로 웹서버를 쉽게 만들게 해주는 프레임워크
+- URL 처리 쉬움
+- API 만들기 쉬움
+- 코드 짧아짐
+
+
+---
+
+## 5. API 만들기 (게임은 일단 chess로 시작)
+
+- 1단계: 백엔드에 Socket.io + 체스 로직 붙이기 (chess.js 라이브러리 활용)
+- 2단계: 간단한 프론트 HTML로 연결 테스트
+- 3단계: 프론트엔드 본격 개발
+- 4단계: 그때 DB 스키마 확정 + RDS 연결
+
+
+``` Node.js + Express + Socket.io + chess.js
+api/
+├── src/
+│   ├── socket/
+│   │   ├── index.js        # Socket.io 초기화
+│   │   └── gameHandler.js  # 게임 이벤트 처리
+│   ├── game/
+│   │   └── chessManager.js # 방 & 게임 상태 관리
+│   └── app.js              # Express + Socket.io 서버
+├── package.json
+└── .env
+```
+```
+death-game/                  ← 현재 root (여기서 git 관리)
+├── backend/
+│   ├── src/
+│   │   ├── game/
+│   │   │   └── chessManager.js
+│   │   └── socket/
+│   │       └── index.js
+│   ├── index.js             ← 기존 index.js 이동
+│   ├── package.json         ← 새로 생성
+│   └── .env                 ← 기존 .env 이동
+├── frontend/                ← 나중에 생성
+└── package.json             ← root package.json (워크스페이스 관리용)
+```
+
+
+---
+
+# 배운점
+
+- JSON : 주석 불가능
+json vs YAML
+
+- 'npm init' 의 역할 :
+프로젝트의 "설명서 + 설정파일"을 만드는 것 package.json
