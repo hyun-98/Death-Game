@@ -113,6 +113,24 @@ pm2 start app.js --name "boardgame-api"
 pm2 save
 pm2 startup  # 서버 재부팅 시 자동 시작
 
+#### SG 설정
+TCP 3000 -> All allow
+
+#### cors 설치
+npm install cors -> 다른 서버에서 요청 오는 걸 허용할지 말지 정하는 보안정책
+
+``` 특정 front만 허용
+app.use(cors({
+  origin: "http://프론트주소"
+}));
+```
+
+#### express : Node.js로 웹서버를 쉽게 만들게 해주는 프레임워크
+- URL 처리 쉬움
+- API 만들기 쉬움
+- 코드 짧아짐
+
+
 ---
 
 ## 5. API 만들기
